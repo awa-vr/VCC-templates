@@ -1,0 +1,34 @@
+{
+	"dependencies": {
+		"com.vrchat.avatars": {
+			"version": "~3.6.x"
+		},
+		"com.dreadscripts.noautogame": {
+			"version": "x"
+		},
+		"io.github.rurre.pumkinsavatartools": {
+			"version": "x"
+		},
+		"jp.whiteflare.avatartools": {
+			"version": "x"
+		},
+		"de.thryrallo.vrc.avatar-performance-tools": {
+			"version": "x"
+		},
+		"com.dreadscripts.vrcsdkplus": {
+			"version": "x"
+		},
+		"com.dreadscripts.hierarchyplus": {
+			"version": "x"
+		},
+		"vrchat.blackstartx.gesture-manager": {
+			"version": "x"
+		},
+		"dev.vrlabs.av3manager": {
+			"version": "x"
+		},
+		"one.razgriz.rats": {
+			"version": "x"
+		}
+	}
+}
