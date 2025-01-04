@@ -50,7 +50,10 @@ $repos = @(
     "https://rurre.github.io/vpm/index.json",
     "https://whiteflare.github.io/vpm-repos/vpm.json",
     "https://vpm.thry.dev/index.json",
-    "https://vpm.razgriz.one/index.json"
+    "https://vpm.razgriz.one/index.json",
+    "https://gabsith.github.io/GabSith-VCC-Listing/index.json"
+    "https://vcc.vrcfury.com",
+    "https://poiyomi.github.io/vpm/index.json"
 )
 
 foreach ($item in $repos) {

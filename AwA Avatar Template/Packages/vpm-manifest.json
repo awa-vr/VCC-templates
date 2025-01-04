@@ -1,7 +1,7 @@
 {
 	"dependencies": {
 		"com.vrchat.avatars": {
-			"version": "~3.6.x"
+			"version": "~3.7.x"
 		},
 		"com.dreadscripts.noautogame": {
 			"version": "x"
@@ -28,6 +28,15 @@
 			"version": "x"
 		},
 		"one.razgriz.rats": {
+			"version": "x"
+		},
+		"com.gabsith.wft": {
+			"version": "x"
+		},
+		"com.vrcfury.vrcfury": {
+			"version": "x"
+		},
+		"com.poiyomi.toon": {
 			"version": "x"
 		}
 	}
