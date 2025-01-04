@@ -64,6 +64,13 @@ $templates = @(
     "AwA Avatar Template"
 )
 
+# Create the Templates folder if it doesn't exist
+$templatesFolder = "$env:LOCALAPPDATA\VRChatCreatorCompanion\Templates"
+if (-not (Test-Path $templatesFolder)) {
+    New-Item -ItemType Directory -Path $templatesFolder
+}
+
+# Copy all files
 foreach ($item in $templates) {
     Copy-Item -Path .\$item -Destination $env:LOCALAPPDATA\VRChatCreatorCompanion\Templates\ -Recurse
 }
