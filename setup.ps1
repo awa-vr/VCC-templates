@@ -46,7 +46,7 @@ if (-not $vpmInstalled) {
 
 # Add the following repos to VCC:
 $repos = @(
-    "https://vpm.dreadscripts.com/listings/main.json",
+    "https://awa-vr.github.io/vrc-tools-vpm/index.json",
     "https://rurre.github.io/vpm/index.json",
     "https://whiteflare.github.io/vpm-repos/vpm.json",
     "https://vpm.thry.dev/index.json",
