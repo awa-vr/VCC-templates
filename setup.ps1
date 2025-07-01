@@ -54,7 +54,11 @@ $repos = @(
     "https://gabsith.github.io/GabSith-VCC-Listing/index.json"
     "https://vcc.vrcfury.com",
     "https://poiyomi.github.io/vpm/index.json",
-    "https://adjerry91.github.io/VRCFaceTracking-Templates/index.json"
+    "https://adjerry91.github.io/VRCFaceTracking-Templates/index.json",
+    "https://hai-vr.github.io/vpm-listing/index.json",
+    "https://wholesomevr.github.io/SPS-Configurator/index.json",
+    "https://wholesomevr.github.io/vpm/index.json",
+    "https://spokeek.github.io/goloco/index.json"
 )
 
 foreach ($item in $repos) {

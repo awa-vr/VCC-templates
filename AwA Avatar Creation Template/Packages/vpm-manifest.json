@@ -1,0 +1,73 @@
+{
+	"dependencies": {
+		"com.vrchat.base": {
+			"version": "~3.8.x"
+		},
+		"com.vrchat.avatars": {
+			"version": "~3.8.x"
+		},
+		"com.awavr.vrcsdkplus": {
+			"version": "x"
+		},
+		"com.awavr.hierarchyplus": {
+			"version": "x"
+		},
+		"com.awavr.noautogame": {
+			"version": "x"
+		},
+		"com.awavr.copycutpaste": {
+			"version": "x"
+		},
+		"com.llealloo.audiolink": {
+			"version": "x"
+		},
+		"io.github.rurre.pumkinsavatartools": {
+			"version": "x"
+		},
+		"io.github.rurre.editor-screenshot": {
+			"version": "x"
+		},
+		"jp.whiteflare.avatartools": {
+			"version": "x"
+		},
+		"de.thryrallo.vrc.avatar-performance-tools": {
+			"version": "x"
+		},
+		"vrchat.blackstartx.gesture-manager": {
+			"version": "x"
+		},
+		"dev.vrlabs.av3manager": {
+			"version": "x"
+		},
+		"one.razgriz.rats": {
+			"version": "x"
+		},
+		"com.gabsith.wft": {
+			"version": "x"
+		},
+		"com.vrcfury.vrcfury": {
+			"version": "x"
+		},
+		"com.poiyomi.toon": {
+			"version": "x"
+		},
+		"adjerry91.vrcft.templates": {
+			"version": "x"
+		},
+		"dev.hai-vr.cge": {
+			"version": "x"
+		},
+		"dev.hai-vr.lightbox-viewer": {
+			"version": "x"
+		},
+		"gogoloco": {
+			"version": "x"
+		},
+		"wholesomevr.sps-configurator": {
+			"version": "x"
+		},
+		"wholesome.dependencies": {
+			"version": "x"
+		}
+	}
+}
