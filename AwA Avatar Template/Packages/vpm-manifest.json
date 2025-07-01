@@ -1,9 +1,21 @@
 {
 	"dependencies": {
+		"com.vrchat.base": {
+			"version": "~3.8.x"
+		},
 		"com.vrchat.avatars": {
 			"version": "~3.8.x"
 		},
-		"com.dreadscripts.noautogame": {
+		"com.awavr.vrcsdkplus": {
+			"version": "x"
+		},
+		"com.awavr.hierarchyplus": {
+			"version": "x"
+		},
+		"com.awavr.noautogame": {
+			"version": "x"
+		},
+		"com.awavr.copycutpaste": {
 			"version": "x"
 		},
 		"io.github.rurre.pumkinsavatartools": {
@@ -13,12 +25,6 @@
 			"version": "x"
 		},
 		"de.thryrallo.vrc.avatar-performance-tools": {
-			"version": "x"
-		},
-		"com.dreadscripts.vrcsdkplus": {
-			"version": "x"
-		},
-		"com.dreadscripts.hierarchyplus": {
 			"version": "x"
 		},
 		"vrchat.blackstartx.gesture-manager": {
