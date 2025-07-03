@@ -1,5 +1,8 @@
 {
 	"dependencies": {
+		"com.vrchat.core.vpm-resolver": {
+			"version": "~0.1.x"
+		},
 		"com.vrchat.base": {
 			"version": "~3.8.x"
 		},

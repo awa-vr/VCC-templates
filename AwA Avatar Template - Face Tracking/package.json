@@ -2,7 +2,7 @@
   "name": "com.awa-vr.template.avatarft",
   "displayName": "AwA Avatar Project with Face Tracking",
   "description": "AwA's customized avatar template with adjerry91's Face Tracking",
-  "version": "1.2.0",
+  "version": "1.4.1",
   "category": "ProjectTemplate",
   "dependencies": {}
 }
