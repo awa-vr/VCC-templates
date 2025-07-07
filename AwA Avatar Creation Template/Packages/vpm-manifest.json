@@ -71,6 +71,9 @@
 		},
 		"wholesome.dependencies": {
 			"version": "x"
+		},
+		"com.hfcred.animationrepathing": {
+			"version": "x"
 		}
 	}
 }
