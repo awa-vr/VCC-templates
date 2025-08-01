@@ -2,7 +2,7 @@
   "name": "com.awa-vr.template.avatarcreation",
   "displayName": "AwA Avatar Creation",
   "description": "Starting point to quickly and easily create an avatar.",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "category": "ProjectTemplate",
   "dependencies": {}
 }
