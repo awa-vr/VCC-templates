@@ -1,57 +1,45 @@
-# Check if DotNet SDK is installed
-$dotnetInstalled = $false
-try {
-    $version = dotnet --version
-    if ($version) {
-        $dotnetInstalled = $true
-        Write-Host ".NET SDK is already installed. Version: $version"
-    }
-}
-catch {
-    # If dotnet is not recognized as a command, it's not installed
-}
 
-# Install DotNet SDK
-if (-not $dotnetInstalled) {
-    Write-Host ".NET SDK is not installed. Installing..."
-    winget install Microsoft.dotNet.SDK.8
-    if ($LASTEXITCODE -ne 0) {
-        Write-Host "Error installing .NET SDK"
+
+# Use vrc-get instead of vpm/dotnet. Download latest x86_64 Windows vrc-get executable if missing
+$toolsDir = Join-Path $env:LOCALAPPDATA 'VRChatCreatorCompanion\Templates\tools'
+$exeName = 'x86_64-pc-windows-msvc-vrc-get.exe'
+$vrcGetPath = Join-Path $toolsDir $exeName
+
+if (-not (Test-Path $vrcGetPath)) {
+    Write-Host "vrc-get not found. Downloading latest vrc-get..."
+    if (-not (Test-Path $toolsDir)) { New-Item -ItemType Directory -Path $toolsDir -Force | Out-Null }
+
+    $downloadUrl = 'https://github.com/vrc-get/vrc-get/releases/latest/download/x86_64-pc-windows-msvc-vrc-get.exe'
+    try {
+        Invoke-WebRequest -Uri $downloadUrl -OutFile $vrcGetPath -UseBasicParsing -ErrorAction Stop
+        Write-Host "Downloaded vrc-get to $vrcGetPath"
+    }
+    catch {
+        Write-Host "Failed to download vrc-get from $downloadUrl"
+        Write-Host $_
         exit 1
     }
 }
 
-# Check if VPM CLI is installed
-$vpmInstalled = $false
+# Verify vrc-get is runnable
 try {
-    $version = vpm --version
-    if ($version) {
-        $vpmInstalled = $true
-        Write-Host "VPM is already installed. Version: $version"
-    }
+    $version = & $vrcGetPath --version 2>$null
+    if ($version) { Write-Host "vrc-get available: $version" }
 }
 catch {
-    # If vpm is not recognized as a command, it's not installed
+    Write-Host "vrc-get could not be executed. Please ensure the downloaded file is valid: $vrcGetPath"
+    Write-Host $_
+    exit 1
 }
 
-# Install VPM
-if (-not $vpmInstalled) {
-    Write-Host "VPM is not installed. Installing..."
-    dotnet tool install --global vrchat.vpm.cli
-    if ($LASTEXITCODE -ne 0) {
-        Write-Host "Error installing VPM"
-        exit 1
-    }
-}
-
-# Add the following repos to VCC:
+# Add the following repos to VCC using vrc-get:
 $repos = @(
     "https://awa-vr.github.io/vrc-tools-vpm/index.json",
     "https://rurre.github.io/vpm/index.json",
     "https://whiteflare.github.io/vpm-repos/vpm.json",
     "https://vpm.thry.dev/index.json",
     "https://vpm.razgriz.one/index.json",
-    "https://gabsith.github.io/GabSith-VCC-Listing/index.json"
+    "https://gabsith.github.io/GabSith-VCC-Listing/index.json",
     "https://vcc.vrcfury.com",
     "https://poiyomi.github.io/vpm/index.json",
     "https://adjerry91.github.io/VRCFaceTracking-Templates/index.json",
@@ -63,8 +51,16 @@ $repos = @(
 )
 
 foreach ($item in $repos) {
-    Write-Host "Adding $item to VCC"
-    vpm add repo $item
+    Write-Host "Adding repo \"$item\" to VCC"
+    try {
+        & $vrcGetPath repo add $item
+        if ($LASTEXITCODE -ne 0) { Write-Host "Failed to add $item (exit code $LASTEXITCODE)" }
+        else { Write-Host "Added $item" }
+    }
+    catch {
+        Write-Host "Error running vrc-get for $item"
+        Write-Host $_
+    }
 }
 
 # Copy the templates
