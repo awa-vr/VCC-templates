@@ -2,7 +2,7 @@
   "name": "com.awa-vr.template.avatar",
   "displayName": "AwA Avatar Project",
   "description": "AwA's customized avatar template",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "category": "ProjectTemplate",
   "dependencies": {}
 }
